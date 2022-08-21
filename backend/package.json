@@ -1,0 +1,15 @@
+{
+  "name": "noteeverything",
+  "version": "1.0.0",
+  "description": "your digital notebook, note anything anywhere",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Aman Kumar Mandal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
