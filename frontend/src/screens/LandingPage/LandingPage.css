@@ -1,0 +1,45 @@
+.main {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../../background.jpg);
+  background-position: left;
+  background-size: cover;
+}
+
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonContainer {
+  margin-top: 300px;
+  margin-right: 160px;
+  display: flex;
+  justify-content: right;
+}
+
+.landingbutton {
+  width: 200px;
+  height: 55px;
+}
+
+@media only screen and (max-width: 768px) {
+  .landingbutton {
+    width: 150px;
+    height: 50px;
+  }
+  .main {
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-direction: column-reverse;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
