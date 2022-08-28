@@ -4,7 +4,7 @@
   "description": "your digital notebook, note anything anywhere",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "author": "Aman Kumar Mandal",
   "license": "ISC",
