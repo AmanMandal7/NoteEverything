@@ -51,7 +51,7 @@ export const createNoteAction = (title, content, category) => async (dispatch, g
 
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                "Content-type": "application/json",
                 Authorization: `Bearer ${userInfo.token}`,
             },
         };
@@ -91,7 +91,7 @@ export const updateNoteAction = (id, title, content, category) => async (dispatc
 
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                "Content-type": "application/json",
                 Authorization: `Bearer ${userInfo.token}`,
             },
         };
