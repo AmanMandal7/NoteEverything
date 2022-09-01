@@ -3,8 +3,7 @@ import MainScreen from '../../components/MainScreen'
 import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../actions/userActions';
 
