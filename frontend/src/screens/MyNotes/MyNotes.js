@@ -26,10 +26,12 @@ const MyNotes = ({ search }) => {
     const noteDelete = useSelector((state) => state.noteDelete)
     const { loading: loadingDelete, error: errorDelete, success: successDelete } = noteDelete;
 
-    const deleteHandler = (id) => {
+    const deleteHandler = async (id) => {
         if (window.confirm("Are you sure?")) {
-            dispatch(deleteNoteAction(id));
+            var res = await dispatch(deleteNoteAction(id));
+            console.log(res);
         }
+        dispatch(listNotes());
     }
     console.log(notes);
 
@@ -52,7 +54,7 @@ const MyNotes = ({ search }) => {
             {notes?.reverse().filter((filteredNote) =>
                 filteredNote.title.toLowerCase().includes(search.toLowerCase())
             ).map(note => (
-                <Accordion key={note._id}>
+                <Accordion key={note?._id}>
                     <Card style={{ margin: "10px" }}>
                         <Card.Header style={{ display: 'flex' }}>
                             <span style={{
@@ -67,8 +69,8 @@ const MyNotes = ({ search }) => {
                             </span>
 
                             <div>
-                                <Button href={`/note/${note._id}`}>Edit</Button>
-                                <Button variant='danger' className='mx-2' onClick={() => deleteHandler(note._id)}>Delete</Button>
+                                <Button href={`/note/${note?._id}`}>Edit</Button>
+                                <Button variant='danger' className='mx-2' onClick={() => deleteHandler(note?._id)}>Delete</Button>
                             </div>
                         </Card.Header>
 
